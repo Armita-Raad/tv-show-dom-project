@@ -41,7 +41,7 @@ const createMovieCard = (movie) => {
     const targetCard = event.target.closest(".card");
     if (targetCard) {
       const showId = targetCard.dataset.showId;
-      window.location.href = `../episodes.html?seriesId=${showId}`;
+      window.location.href = `./episodes.html?seriesId=${showId}`;
     }
   });
 
@@ -90,4 +90,3 @@ document
   .querySelector('input[type="search"]')
   .addEventListener("input", handleSearch);
 handleSearch();
-
