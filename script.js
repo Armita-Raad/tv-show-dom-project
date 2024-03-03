@@ -41,8 +41,7 @@ const createMovieCard = (movie) => {
     const targetCard = event.target.closest(".card");
     if (targetCard) {
       const showId = targetCard.dataset.showId;
-      // const episodes = await getEpisodesForShow();
-      window.location.href = `../../episodes/episodes.html?seriesId=${showId}`;
+      window.location.href = `../episodes/episodes.html?seriesId=${showId}`;
     }
   });
 
@@ -60,17 +59,8 @@ const handleSearch = async () => {
 
     movies.slice(0, 12).forEach((movie) => {
       const card = createMovieCard(movie);
-      // card.dataset.showId = movie.id;
       cards.append(card);
     });
-    // cards.addEventListener("click", async (event) => {
-    //   const targetCard = event.target.closest(".card");
-    //   if (targetCard) {
-    //     const showId = targetCard.dataset.showId;
-    //     const episodes = await getEpisodesForShow(showId);
-    //     populateDropdown(episodes);
-    //   }
-    // });
   } else {
     const showNames = [
       "Game of Thrones",
@@ -101,4 +91,3 @@ document
   .addEventListener("input", handleSearch);
 handleSearch();
 
-const hello = "heosflkdjf";
