@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lora";
+}
+body {
+  background-color: rgba(29, 29, 42, 255);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+/* nav section */
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.site-link {
+  text-decoration: none;
+  display: flex;
+  font-weight: 700;
+  font-size: larger;
+}
+.green {
+  color: #367361;
+}
+.green::after {
+  content: "SHOWS";
+  color: white;
+}
+.search-container {
+  position: relative;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+.search-container select {
+  width: 100%;
+  height: 30px;
+  padding-right: 30px;
+  padding-left: 20px;
+  background-color: rgba(46, 46, 56, 255);
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+.search-container i.bi-search {
+  color: white;
+  position: absolute;
+  right: 40px;
+  padding-right: 5px;
+  margin-right: 1rem;
+  cursor: text;
+}
+
+.search-container button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(7, 219, 162, 255);
+  margin-left: 1rem;
+}
+.search-container button i.bi-play-fill {
+  color: white;
+  font-size: xx-large;
+}
+
+/* side bar section */
+.side-section {
+  color: white;
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in;
+}
+.icons:hover {
+  cursor: pointer;
+  color: rgba(7, 219, 162, 255);
+}
+.icons p {
+  font-size: x-small;
+}
+.icons i {
+  font-size: x-large;
+}
+.side-section a {
+  color: white;
+  transition: all 0.1s ease-in;
+}
+.side-section a:hover {
+  color: rgba(7, 219, 162, 255);
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #367361;
+}
+footer i {
+  color: white;
+  margin: 10px;
+  transition: all ease-in 0.1s;
+}
+footer i:hover {
+  cursor: pointer;
+  color: rgba(7, 219, 162, 255);
+}
+/* more link */
+.more a {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  transition: all 0.1s ease-in-out;
+}
+.more a:hover {
+  color: rgba(7, 219, 162, 255);
+}
+
+.episodes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.episode-card {
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  background-color: rgba(46, 46, 56, 255);
+  position: relative;
+}
+
+.episode-card p {
+  color: white;
+  margin-top: 3rem;
+  height: 30px;
+  margin-left: 10px;
+}
+.episode-card a {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  margin: 10px;
+  width: 50px;
+  /* background-color: white; */
+  position: absolute;
+  left: 10rem;
+}
+.episode-card a div {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(7, 219, 162, 255);
+  border-radius: 50%;
+  position: relative;
+}
+.episode-card a i {
+  font-size: xx-large;
+  color: white;
+  position: absolute;
+  left: 5px;
+  top: -3px;
+}
+
+.episode-summary p {
+  width: 250px;
+  min-height: 100px;
+  max-height: 200px;
+  z-index: 100;
+  background-color: black;
+  position: absolute;
+  top: 185px;
+  right: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-wrap: wrap;
+  color: white;
+  padding:0 10px;
+  opacity: 0.8;
+}
+/* for the footer to stay in the end of the page */
+nav,
+footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+main {
+  flex-grow: 1;
+}
