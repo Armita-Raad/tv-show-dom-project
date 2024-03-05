@@ -22,6 +22,7 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 .site-link {
   text-decoration: none;
@@ -212,4 +213,15 @@ footer {
 }
 main {
   flex-grow: 1;
+}
+
+@media screen and (max-width: 500px){
+  .green, .green::after{
+    display: none;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
 }
